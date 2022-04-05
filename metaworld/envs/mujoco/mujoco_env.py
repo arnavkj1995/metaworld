@@ -129,7 +129,8 @@ class MujocoEnv(gym.Env, abc.ABC):
             return self.sim.render(
                 *resolution,
                 mode='offscreen',
-                camera_name=camera_name
+                camera_name=camera_name,
+                device_id=0
             )
 
     def close(self):
